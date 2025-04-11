@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 197 74% 10%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 197 74% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 197 74% 10%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 94%;
+
+    --primary: 103 60% 55%;
+    --primary-foreground: 197 74% 10%;
+    --primary-container: 105 80% 92%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --secondary-container: 0 0% 96.1%;
+
+    --accent: 0 0% 100%;
+    --accent-foreground: 197 74% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 103 10% 70%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 197 64% 10%;
+    --foreground: 103 2% 85%;
+
+    --muted: 197 64% 15%;
+    --muted-foreground: 0 0% 64%;
+
+    --popover: 197 64% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --card: 197 64% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --border: 197 45% 23%;
+    --input: 197 40% 20%;
+
+    --primary: 103 68% 66%;
+    --primary-foreground: 197 94% 10%;
+    --primary-container: 105 80% 8%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 197 64% 12%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 80% 65%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 103 10% 70%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
