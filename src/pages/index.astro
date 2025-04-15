@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Background from "../components/Background.vue";
+import HeroSection from "../components/HeroSection.astro";
+import HowItWorks from "../components/HowItWorks.astro";
 
 // Client-side redirect to www if coming from apex domain
 if (Astro.request.headers.get("host") === "testmagic.io") {
@@ -16,39 +18,14 @@ if (Astro.request.headers.get("host") === "testmagic.io") {
 
 <Layout title="TestMagic - AI for API & Backend Testing">
   <Background>
-    <main class="min-h-[100dvh] w-full flex flex-col h-full">
+    <main
+      class="relative min-h-[100dvh] overflow-y-scroll scrollbar-none w-full flex flex-col h-full z-10"
+    >
       <nav class="py-4 sm:py-6 px-1 sm:px-8">
         <img src="testmagic-logo.svg" alt="TestMagic Logo" class="h-9" />
       </nav>
-
-      <div
-        class="max-w-2xl h-full flex flex-col items-center justify-center mx-auto mb-12 text-center px-4 sm:px-6"
-      >
-        <img
-          src="frog-mascot.png"
-          alt="TestMagic Frog Mascot"
-          class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto"
-        />
-
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
-          <span>AI for backend & API testing. </span>
-          <span class="text-primary">Faster releases, fewer bugs.</span>
-        </h1>
-
-        <p
-          class="text-lg sm:text-xl opacity-70 max-w-xl sm:max-w-2xl mx-auto mb-8 sm:mb-12"
-        >
-          TestMagic intelligently writes, adapts, scales, and monitors backend
-          tests automatically, saving 90% of your time.
-        </p>
-
-        <a
-          href="https://app.testmagic.io/"
-          class="inline-block px-8 sm:px-12 py-2.5 sm:py-3 rounded-md text-base sm:text-lg font-semibold border border-card-foreground bg-primary hover:bg-accent hover:text-accent-foreground !shadow-foreground shadow-sharp-sm hover:shadow-sharp hover:-translate-x-0.5 hover:-translate-y-0.5 transform transition-all duration-200"
-        >
-          Start Here
-        </a>
-      </div>
+      <HeroSection />
+      <HowItWorks />
     </main>
   </Background>
 </Layout>

@@ -3,6 +3,18 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      // Add custom scrollbar hiding utility
+      extend: {
+        // Hide scrollbar for Chrome, Safari and Opera
+        ".scrollbar-none": {
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+          // Hide scrollbar for IE, Edge and Firefox
+          "-ms-overflow-style": "none",
+          "scrollbar-width": "none",
+        },
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

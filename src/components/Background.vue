@@ -12,10 +12,10 @@ const gridBg = computed(() => {
 </script>
 
 <template>
-    <div class="flex w-full h-full bg-background">
-        <div class="flex w-full h-full bg-repeat bg-[length:48px_48px]" :style="{ backgroundImage: gridBg }">
+    <div class="fixed inset-0 w-full h-full bg-background">
+        <div class="absolute inset-0 w-full h-full bg-repeat bg-[length:48px_48px]" :style="{ backgroundImage: gridBg }">
             <div
-                class="w-full h-full flex items-center justify-center gap-6 bg-gradient-to-b from-primary/0 to-primary/20 relative px-6">
+                class="absolute inset-0 w-full h-full bg-gradient-to-b from-primary/0 to-primary/20 px-6">
                 <slot />
             </div>
         </div>

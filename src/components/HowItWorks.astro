@@ -1,0 +1,63 @@
+---
+const steps = [
+  {
+    number: 1,
+    title: "Connect Your API",
+    description:
+      "Simply connect your API endpoint and TestMagic will automatically analyze your API structure.",
+    isFirst: true,
+  },
+  {
+    number: 2,
+    title: "Generate Tests",
+    description:
+      "Our AI generates comprehensive test cases covering edge cases and common scenarios.",
+  },
+  {
+    number: 3,
+    title: "Debug Precisely",
+    description:
+      "Get detailed debugging information and suggestions to quickly identify issues.",
+  },
+  {
+    number: 4,
+    title: "AI-Powered Fixes",
+    description:
+      "Let AI assist in fixing failed tests and updating test cases as your API evolves.",
+  },
+];
+---
+
+<div class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto rounded-xl shadow-lg">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium text-center my-12">
+    How TestMagic Works
+  </h2>
+
+  <div class="flex flex-col md:flex-row gap-6 md:gap-4">
+    {
+      steps.map((step) => (
+        <div
+          class={`flex-1 bg-card group p-6 rounded-xl border ${step.isFirst ? "hover:border-primary" : "border hover:primary"} hover:shadow-md transition-all duration-300`}
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <div
+              class={`w-10 h-10 rounded-full ${step.isFirst ? "bg-primary text-foreground" : "bg-primary text-backgrouns"} flex items-center justify-center text-lg font-bold shadow-md`}
+            >
+              {step.number}
+            </div>
+            <h3
+              class={`text-lg font-semibold ${step.isFirst ? "text-foreground" : "text-gray-900"}`}
+            >
+              {step.title}
+            </h3>
+          </div>
+          <p
+            class={`text-sm ${step.isFirst ? "text-foreground" : "text-gray-600"}`}
+          >
+            {step.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>
