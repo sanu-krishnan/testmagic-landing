@@ -1,17 +1,19 @@
 ---
+import { TestTube, Code, Building2 } from "lucide-vue-next";
+
 const audiences = [
   {
-    icon: "🧪",
+    icon: TestTube,
     title: "QA Engineers",
     description: "who want to move faster with fewer manual tests.",
   },
   {
-    icon: "🧑‍💻",
+    icon: Code,
     title: "Developers",
     description: "building or maintaining APIs.",
   },
   {
-    icon: "🏢",
+    icon: Building2,
     title: "Startups & Teams",
     description: "pushing rapid backend updates.",
   },
@@ -27,7 +29,9 @@ const audiences = [
     {
       audiences.map((audience) => (
         <div class="flex-1 bg-card group p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
-          <div class="text-4xl mb-4">{audience.icon}</div>
+          <div class="text-4xl mb-4">
+            <audience.icon class="w-10 h-10" />
+          </div>
           <h3 class="text-xl font-semibold mb-2">{audience.title}</h3>
           <p class="text-lg opacity-70">{audience.description}</p>
         </div>

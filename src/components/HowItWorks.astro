@@ -28,38 +28,36 @@ const steps = [
 ];
 ---
 
-<div class="bg-card">
-  <div class="py-16 sm:py-24 px-4 sm:px-6 mx-auto rounded-xl max-w-5xl">
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium text-center my-12">
-      How TestMagic Works
-    </h2>
+<div class="py-16 sm:py-24 px-4 sm:px-6 mx-auto rounded-xl max-w-7xl">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium text-center my-12">
+    How TestMagic Works
+  </h2>
 
-    <div class="flex flex-col md:flex-row gap-6 md:gap-4">
-      {
-        steps.map((step) => (
-          <div
-            class={`flex-1 bg-card group p-6 rounded-xl border ${step.isFirst ? "hover:border-primary" : "border hover:primary"} hover:shadow-md transition-all duration-300`}
-          >
-            <div class="flex items-center gap-4 mb-4">
-              <div
-                class={`w-10 h-10 rounded-full ${step.isFirst ? "bg-primary text-foreground" : "bg-primary text-backgrouns"} flex items-center justify-center text-lg font-bold shadow-md`}
-              >
-                {step.number}
-              </div>
-              <h3
-                class={`text-lg font-semibold ${step.isFirst ? "text-foreground" : "text-gray-900"}`}
-              >
-                {step.title}
-              </h3>
-            </div>
-            <p
-              class={`text-sm ${step.isFirst ? "text-foreground" : "text-gray-600"}`}
+  <div class="flex flex-col md:flex-row gap-6 md:gap-4">
+    {
+      steps.map((step) => (
+        <div
+          class={`flex-1 bg-card group p-6 rounded-xl border ${step.isFirst ? "hover:border-primary" : "border hover:primary"} hover:shadow-md transition-all duration-300`}
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <div
+              class={`w-10 h-10 rounded-full ${step.isFirst ? "bg-primary text-foreground" : "bg-primary text-backgrouns"} flex items-center justify-center text-lg font-bold shadow-md`}
             >
-              {step.description}
-            </p>
+              {step.number}
+            </div>
+            <h3
+              class={`text-lg font-semibold ${step.isFirst ? "text-foreground" : "text-gray-900"}`}
+            >
+              {step.title}
+            </h3>
           </div>
-        ))
-      }
-    </div>
+          <p
+            class={`text-sm ${step.isFirst ? "text-foreground" : "text-gray-600"}`}
+          >
+            {step.description}
+          </p>
+        </div>
+      ))
+    }
   </div>
 </div>

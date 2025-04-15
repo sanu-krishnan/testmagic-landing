@@ -1,22 +1,24 @@
 ---
+import { Sparkles, Lightbulb, Wrench, Rocket } from "lucide-vue-next";
+
 const benefits = [
   {
-    emoji: "✨",
+    icon: Sparkles,
     title: "No more boilerplate",
     description: "Skip writing repetitive test code.",
   },
   {
-    emoji: "💡",
+    icon: Lightbulb,
     title: "Transparent & editable",
     description: "AI writes, you review.",
   },
   {
-    emoji: "🛠",
+    icon: Wrench,
     title: "Test healing",
     description: "Let TestMagic auto-fix broken tests after an API change.",
   },
   {
-    emoji: "🚀",
+    icon: Rocket,
     title: "Works out of the box",
     description: "Nothing to install. Just drop in your Swagger URL.",
   },
@@ -33,7 +35,9 @@ const benefits = [
       benefits.map((benefit) => (
         <div class="bg-card p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
           <div class="flex items-start gap-4">
-            <div class="text-3xl">{benefit.emoji}</div>
+            <div class="text-3xl">
+              <benefit.icon class="w-8 h-8" />
+            </div>
             <div>
               <h3 class="text-lg font-semibold text-foreground mb-2">
                 {benefit.title}
