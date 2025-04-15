@@ -1,0 +1,52 @@
+---
+const features = [
+  {
+    emoji: "🌐",
+    title: "Built for Modern Teams",
+    description: "Supports multiple environments",
+  },
+  {
+    emoji: "✅",
+    title: "Secure Access",
+    description: "Add bearer tokens and custom headers",
+  },
+  {
+    emoji: "🔄",
+    title: "AI-Powered Updates",
+    description: "Regenerate or edit tests with AI assistance",
+  },
+  {
+    emoji: "🧪",
+    title: "Full Control",
+    description: "Full control with manual editing",
+  },
+  {
+    emoji: "📂",
+    title: "Organized Workflow",
+    description: "Project-based organization",
+  },
+  {
+    emoji: "🔐",
+    title: "Secure Testing",
+    description: "Add bearer tokens and custom headers",
+  },
+];
+---
+
+<section class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-12">
+    Features
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {
+      features.map((feature) => (
+        <div class="bg-card p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
+          <div class="text-4xl mb-4">{feature.emoji}</div>
+          <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
+          <p class="text-sm opacity-70">{feature.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

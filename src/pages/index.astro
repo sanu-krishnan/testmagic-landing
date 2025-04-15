@@ -2,7 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import Background from "../components/Background.vue";
 import HeroSection from "../components/HeroSection.astro";
+import Features from "../components/Features.astro";
+import WhyTestMagic from "../components/WhyTestMagic.astro";
 import HowItWorks from "../components/HowItWorks.astro";
+import TargetAudience from "../components/TargetAudience.astro";
+import CTASection from "../components/CTASection.astro";
+import Footer from "../components/Footer.astro";
 
 // Client-side redirect to www if coming from apex domain
 if (Astro.request.headers.get("host") === "testmagic.io") {
@@ -26,6 +31,11 @@ if (Astro.request.headers.get("host") === "testmagic.io") {
       </nav>
       <HeroSection />
       <HowItWorks />
+      <Features />
+      <WhyTestMagic />
+      <TargetAudience />
+      <CTASection />
+      <Footer />
     </main>
   </Background>
 </Layout>

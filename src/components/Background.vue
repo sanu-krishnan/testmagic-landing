@@ -13,9 +13,9 @@ const gridBg = computed(() => {
 
 <template>
     <div class="fixed inset-0 w-full h-full bg-background">
-        <div class="absolute inset-0 w-full h-full bg-repeat bg-[length:48px_48px]" :style="{ backgroundImage: gridBg }">
-            <div
-                class="absolute inset-0 w-full h-full bg-gradient-to-b from-primary/0 to-primary/20 px-6">
+        <div class="absolute inset-0 w-full h-full bg-repeat bg-[length:48px_48px]"
+            :style="{ backgroundImage: gridBg }">
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-b from-primary/0 to-primary/20">
                 <slot />
             </div>
         </div>

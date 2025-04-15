@@ -1,0 +1,48 @@
+---
+const benefits = [
+  {
+    emoji: "✨",
+    title: "No more boilerplate",
+    description: "Skip writing repetitive test code.",
+  },
+  {
+    emoji: "💡",
+    title: "Transparent & editable",
+    description: "AI writes, you review.",
+  },
+  {
+    emoji: "🛠",
+    title: "Test healing",
+    description: "Let TestMagic auto-fix broken tests after an API change.",
+  },
+  {
+    emoji: "🚀",
+    title: "Works out of the box",
+    description: "Nothing to install. Just drop in your Swagger URL.",
+  },
+];
+---
+
+<div class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto rounded-xl">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-12">
+    Why TestMagic?
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {
+      benefits.map((benefit) => (
+        <div class="bg-card p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl">{benefit.emoji}</div>
+            <div>
+              <h3 class="text-lg font-semibold text-foreground mb-2">
+                {benefit.title}
+              </h3>
+              <p class="text-sm text-gray-600">{benefit.description}</p>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
