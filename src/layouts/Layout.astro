@@ -1,5 +1,6 @@
 ---
 import "../styles/colors.css";
+import SparkleEffect from "../components/SparkleEffect.vue";
 ---
 
 <!doctype html>
@@ -54,8 +55,9 @@ import "../styles/colors.css";
       gtag("config", "G-3PQTPNYC7D");
     </script>
   </head>
-  <body>
+  <body class="min-h-screen bg-background text-foreground">
     <slot />
+    <SparkleEffect client:load />
   </body>
 </html>
 
