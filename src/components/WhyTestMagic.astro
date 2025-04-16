@@ -1,7 +1,7 @@
 ---
 import {
   Sparkles,
-  Lightbulb,
+  Variable,
   Wrench,
   Rocket,
   Zap,
@@ -20,15 +20,20 @@ const benefits = [
     description: "Tests adapst to your API changes.",
   },
   {
+    icon: Variable,
+    title: "Support test environments",
+    description: "Easily create and manage multiple environments.",
+  },
+  {
     icon: Sparkles,
     title: "No more boilerplate",
     description: "Skip writing repetitive test code.",
   },
-  {
-    icon: Lightbulb,
-    title: "Transparent & editable",
-    description: "AI writes, you review.",
-  },
+  //   {
+  //     icon: Lightbulb,
+  //     title: "Transparent & editable",
+  //     description: "AI writes, you review.",
+  //   },
   {
     icon: Wrench,
     title: "Test healing",
@@ -55,7 +60,7 @@ const benefits = [
         <div class="group bg-card/80 p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
           <div class="flex items-start gap-4">
             <div class="text-3xl group-hover:text-primary">
-              <benefit.icon class="w-8 h-8 " />
+              <benefit.icon class="w-6 h-6 mt-1 " />
             </div>
             <div>
               <h3 class="text-lg text-foreground group-hover:text-primary">
