@@ -1,7 +1,24 @@
 ---
-import { Sparkles, Lightbulb, Wrench, Rocket } from "lucide-vue-next";
+import {
+  Sparkles,
+  Lightbulb,
+  Wrench,
+  Rocket,
+  Zap,
+  Clock,
+} from "lucide-vue-next";
 
 const benefits = [
+  {
+    icon: Zap,
+    title: "Save 90% time",
+    description: "TestMagic writes and maintains tests for you.",
+  },
+  {
+    icon: Clock,
+    title: "Ship APIs faster with confidence",
+    description: "Tests adapst to your API changes.",
+  },
   {
     icon: Sparkles,
     title: "No more boilerplate",
@@ -30,7 +47,7 @@ const benefits = [
     Why TestMagic?
   </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
     {
       benefits.map((benefit) => (
         <div class="group bg-card/80 p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
