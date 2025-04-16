@@ -5,7 +5,6 @@ const steps = [
     title: "Connect Your API",
     description:
       "Simply connect your API endpoint and TestMagic will automatically analyze your API structure.",
-    isFirst: true,
   },
   {
     number: 2,
@@ -36,26 +35,14 @@ const steps = [
   <div class="flex flex-col md:flex-row gap-6 md:gap-4">
     {
       steps.map((step) => (
-        <div
-          class={`flex-1 bg-card group p-6 rounded-xl border ${step.isFirst ? "hover:border-primary" : "border hover:primary"} hover:shadow-md transition-all duration-300`}
-        >
+        <div class="flex-1 bg-card group p-6 rounded-xl border hover:primary hover:shadow-md transition-all duration-300">
           <div class="flex items-center gap-4 mb-4">
-            <div
-              class={`w-10 h-10 rounded-full ${step.isFirst ? "bg-primary text-foreground" : "bg-primary text-backgrouns"} flex items-center justify-center text-lg font-bold shadow-md`}
-            >
+            <div class="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-bold shadow-md">
               {step.number}
             </div>
-            <h3
-              class={`text-lg font-semibold ${step.isFirst ? "text-foreground" : "text-gray-900"}`}
-            >
-              {step.title}
-            </h3>
+            <h3 class="text-lg font-semibold text-foreground">{step.title}</h3>
           </div>
-          <p
-            class={`text-sm ${step.isFirst ? "text-foreground" : "text-gray-600"}`}
-          >
-            {step.description}
-          </p>
+          <p class="text-sm text-foreground">{step.description}</p>
         </div>
       ))
     }
