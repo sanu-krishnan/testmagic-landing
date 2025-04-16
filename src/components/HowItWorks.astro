@@ -1,10 +1,14 @@
 ---
+import ThemedImage from "./ThemedImage.vue";
+
 const steps = [
   {
     number: 1,
     title: "Connect Your API",
     image: "step-1.png",
+    imageDark: "step-1-dark.png",
     image2: "step-1-2.png",
+    image2Dark: "step-1-2-dark.png",
     description:
       "Input your OpenAPI/Swagger endpoint and TestMagic will automatically analyze and list you API endpoints.",
   },
@@ -12,7 +16,9 @@ const steps = [
     number: 2,
     title: "Generate Tests",
     image: "step-2.png",
+    imageDark: "step-2-dark.png",
     image2: "step-2-2.png",
+    image2Dark: "step-2-2-dark.png",
     description:
       "Our AI generates comprehensive test cases covering edge cases and common scenarios.",
   },
@@ -28,7 +34,9 @@ const steps = [
   number: 3,
   title: "Run in Bulk & Debug Precisely",
   image: "step-3.png",
+  imageDark: "step-3-dark.png",
   image2: "step-3-1.png",
+  image2Dark: "step-3-2-dark.png",
   description:
     "Run tests in bulk and get detailed debugging insights including run status, request and response logs, and response times.",
 },
@@ -56,11 +64,18 @@ const steps = [
           </div>
           <!-- Image transitions -->
           <div class="md:w-7/12">
-            <img src={step.image} alt="TestMagic input" class="flex-1 group-hover:hidden block mx-auto transition-transform duration-300" />
-          <img src={step.image2} alt="TestMagic result" class=" flex-1 hidden group-hover:block mx-auto transition-transform duration-300" />
-          
+          <ThemedImage client:load
+            imageSrc={step.image}
+            darkImageSrc={step.imageDark}
+            altText="TestMagic input"
+            additionalClasses="flex-1 group-hover:hidden block mx-auto transition-transform duration-300"/>
+            <ThemedImage client:load
+            imageSrc={step.image2}
+            darkImageSrc={step.image2Dark}
+            altText="TestMagic input"
+            additionalClasses="flex-1 hidden group-hover:block mx-auto transition-transform duration-300"/> 
           </div>
-           </div>
+        </div>
       ))
     }
   </div>
