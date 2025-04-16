@@ -33,16 +33,18 @@ const benefits = [
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {
       benefits.map((benefit) => (
-        <div class="bg-card p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
+        <div class="group bg-card/80 p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
           <div class="flex items-start gap-4">
-            <div class="text-3xl">
-              <benefit.icon class="w-8 h-8" />
+            <div class="text-3xl group-hover:text-primary">
+              <benefit.icon class="w-8 h-8 " />
             </div>
             <div>
-              <h3 class="text-lg font-semibold text-foreground mb-2">
+              <h3 class="text-lg text-foreground group-hover:text-primary">
                 {benefit.title}
               </h3>
-              <p class="text-sm text-gray-600">{benefit.description}</p>
+              <p class="text-sm md:text-base opacity-70">
+                {benefit.description}
+              </p>
             </div>
           </div>
         </div>
