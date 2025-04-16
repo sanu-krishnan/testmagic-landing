@@ -10,6 +10,7 @@ import CTASection from "../components/CTASection.astro";
 import Footer from "../components/Footer.astro";
 import ThemeToggle from "../components/ThemeToggle.vue";
 import LogoToggle from "../components/LogoToggle.vue";
+import FAQ from "../components/FAQ.vue";
 
 // Client-side redirect to www if coming from apex domain
 if (Astro.request.headers.get("host") === "testmagic.io") {
@@ -39,6 +40,7 @@ if (Astro.request.headers.get("host") === "testmagic.io") {
     <WhyTestMagic />
     <TargetAudience />
     <CTASection />
+    <FAQ />
     <Footer />
   </main>
 </Layout>
