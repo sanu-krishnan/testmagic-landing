@@ -5,7 +5,7 @@ const audiences = [
   {
     icon: TestTube,
     title: "QA Engineers",
-    description: "who want to move faster with fewer manual tests.",
+    description: "who want to move faster.",
   },
   {
     icon: Code,
@@ -20,21 +20,27 @@ const audiences = [
 ];
 ---
 
-<div class="w-full bg-background">
-  <div class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto rounded-xl">
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium text-center my-12">
+<div class="w-full">
+  <div class="py-16 sm:pt-24 px-4 sm:px-6 max-w-7xl mx-auto rounded-xl">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-8">
       Who's it for?
     </h2>
 
-    <div class="flex flex-col md:flex-row gap-6 md:gap-4">
+    <div class="flex flex-col md:flex-row gap-3 md:gap-2">
       {
         audiences.map((audience) => (
-          <div class="flex-1 bg-card group p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
+          <div class="group flex gap-3 flex-1 bg-card/80 group px-6 py-10 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
             <div class="text-4xl mb-4">
-              <audience.icon class="w-10 h-10" />
+              <audience.icon class="w-8 h-8 group-hover:text-primary" />
             </div>
-            <h3 class="text-xl font-semibold mb-2">{audience.title}</h3>
-            <p class="text-lg opacity-70">{audience.description}</p>
+            <div>
+              <h3 class="md: text-xl mb-1 group-hover:text-primary">
+                {audience.title}
+              </h3>
+              <p class="text-sm md:text-base opacity-70">
+                {audience.description}
+              </p>
+            </div>
           </div>
         ))
       }
