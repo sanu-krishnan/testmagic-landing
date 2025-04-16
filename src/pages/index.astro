@@ -11,17 +11,6 @@ import Footer from "../components/Footer.astro";
 import ThemeToggle from "../components/ThemeToggle.vue";
 import LogoToggle from "../components/LogoToggle.vue";
 import FAQ from "../components/FAQ.vue";
-
-// Client-side redirect to www if coming from apex domain
-if (Astro.request.headers.get("host") === "testmagic.io") {
-  return Astro.redirect(
-    "https://www.testmagic.io" +
-      Astro.url.pathname +
-      Astro.url.search +
-      Astro.url.hash,
-    301
-  );
-}
 ---
 
 <Layout title="TestMagic - AI for API & Backend Testing">
