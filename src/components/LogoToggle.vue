@@ -21,5 +21,5 @@ onMounted(() => {
 
 <template>
     <img :src="theme === 'dark' ? 'test-magic-logo-text-dark.svg' : 'testmagic-logo.svg'"
-        :alt="theme === 'dark' ? 'TestMagic Dark Logo' : 'TestMagic Logo'" class="h-9" />
+        :alt="theme === 'dark' ? 'TestMagic Dark Logo' : 'TestMagic Logo'" class="h-9 transition-all" />
 </template>

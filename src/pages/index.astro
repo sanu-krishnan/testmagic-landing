@@ -24,22 +24,21 @@ if (Astro.request.headers.get("host") === "testmagic.io") {
 ---
 
 <Layout title="TestMagic - AI for API & Backend Testing">
-  <Background client:load>
-    <main
-      class="relative min-h-[100dvh] overflow-y-scroll scrollbar-none w-full flex flex-col h-full z-10"
-    >
-      <nav class="py-4 sm:py-6 px-3 sm:px-8 flex justify-between">
-        <LogoToggle client:load />
-        <ThemeToggle client:load />
-      </nav>
+  <Background client:load />
+  <main
+    class="relative min-h-[100dvh] overflow-y-scroll scrollbar-none w-full flex flex-col h-full z-10"
+  >
+    <nav class="py-4 sm:py-6 px-3 sm:px-8 flex justify-between">
+      <LogoToggle client:load />
+      <ThemeToggle client:load />
+    </nav>
 
-      <HeroSection />
-      <HowItWorks />
-      <Features />
-      <WhyTestMagic />
-      <TargetAudience />
-      <CTASection />
-      <Footer />
-    </main>
-  </Background>
+    <HeroSection />
+    <HowItWorks />
+    <Features />
+    <WhyTestMagic />
+    <TargetAudience />
+    <CTASection />
+    <Footer />
+  </main>
 </Layout>
