@@ -8,6 +8,8 @@ import HowItWorks from "../components/HowItWorks.astro";
 import TargetAudience from "../components/TargetAudience.astro";
 import CTASection from "../components/CTASection.astro";
 import Footer from "../components/Footer.astro";
+import ThemeToggle from "../components/ThemeToggle.vue";
+import LogoToggle from "../components/LogoToggle.vue";
 
 // Client-side redirect to www if coming from apex domain
 if (Astro.request.headers.get("host") === "testmagic.io") {
@@ -22,13 +24,15 @@ if (Astro.request.headers.get("host") === "testmagic.io") {
 ---
 
 <Layout title="TestMagic - AI for API & Backend Testing">
-  <Background>
+  <Background client:load>
     <main
       class="relative min-h-[100dvh] overflow-y-scroll scrollbar-none w-full flex flex-col h-full z-10"
     >
-      <nav class="py-4 sm:py-6 px-1 sm:px-8">
-        <img src="testmagic-logo.svg" alt="TestMagic Logo" class="h-9" />
+      <nav class="py-4 sm:py-6 px-3 sm:px-8 flex justify-between">
+        <LogoToggle client:load />
+        <ThemeToggle client:load />
       </nav>
+
       <HeroSection />
       <HowItWorks />
       <Features />
