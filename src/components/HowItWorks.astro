@@ -3,46 +3,66 @@ const steps = [
   {
     number: 1,
     title: "Connect Your API",
+    image: "step-1.png",
+    image2: "step-1-2.png",
     description:
-      "Simply connect your API endpoint and TestMagic will automatically analyze your API structure.",
+      "Input your OpenAPI/Swagger endpoint and TestMagic will automatically analyze and list you API endpoints.",
   },
   {
     number: 2,
     title: "Generate Tests",
+    image: "step-1.png",
+    image2: "step-1-2.png",
     description:
       "Our AI generates comprehensive test cases covering edge cases and common scenarios.",
   },
   {
     number: 3,
     title: "Debug Precisely",
+    image: "step-1.png",
+    image2: "step-1-2.png",
     description:
       "Get detailed debugging information and suggestions to quickly identify issues.",
   },
   {
     number: 4,
     title: "AI-Powered Fixes",
+    image: "step-1.png",
+    image2: "step-1-2.png",
     description:
       "Let AI assist in fixing failed tests and updating test cases as your API evolves.",
   },
 ];
 ---
 
-<div class="py-16 sm:py-24 px-4 sm:px-6 mx-auto rounded-xl max-w-7xl">
+<div class="py-16 sm:py-24 px-4 sm:px-12 mx-auto rounded-xl max-w-7xl">
   <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium text-center my-12">
-    How TestMagic Works
+    How TestMagic Works?
   </h2>
 
-  <div class="flex flex-col md:flex-row gap-6 md:gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4">
     {
       steps.map((step) => (
-        <div class="flex-1 bg-card group p-6 rounded-xl border hover:primary hover:shadow-md transition-all duration-300">
-          <div class="flex items-center gap-4 mb-4">
-            <div class="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-bold shadow-md">
-              {step.number}
+        <div class="group flex flex-col bg-background/70 group overflow-clip rounded-xl border hover:border-primary hover:primary hover:shadow-md transition-all duration-200">
+          <div class="space-y-1 flex-1 p-6">
+            <div class="w-16 h-6 rounded-full bg-primary/85 text-primary-foreground flex items-center justify-center text-sm">
+              Step {step.number}
             </div>
-            <h3 class="text-lg font-semibold text-foreground">{step.title}</h3>
+            <h3 class="text-lg font-semibold text-foreground mt-1">
+              {step.title}
+            </h3>
+            <p class="text-sm text-foreground opacity-70">{step.description}</p>
           </div>
-          <p class="text-sm text-foreground">{step.description}</p>
+          <img
+            src={step.image}
+            alt="TestMagic input"
+            class="group-hover:hidden block mx-auto transition-transform duration-300"
+          />
+          <img
+            src={step.image2}
+            alt="TestMagic result"
+            class="hidden group-hover:block mx-auto transition-transform duration-300"
+          />
         </div>
       ))
     }
