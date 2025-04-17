@@ -4,7 +4,7 @@ import { ref, onMounted, watch } from "vue";
 const isDark = ref(false);
 
 const setGridBg = (dark: boolean) => {
-    const strokeColor = dark ? "#ffffff" : "#000000";
+    const strokeColor = dark ? "#999999" : "#000000";
     const encodedSvg = encodeURIComponent(`
     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="${strokeColor}" opacity="0.15" stroke-width="1">
       <path d="M 48 0 L 0 0 L 0 48"></path>
