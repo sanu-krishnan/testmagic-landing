@@ -31,12 +31,12 @@ const audiences = [
     <div class="flex flex-col md:flex-row gap-1 md:gap-2">
       {
         audiences.map((audience) => (
-          <div class="group flex gap-2 md:gap-3 flex-1 bg-card/80 group p-4 md:p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
+          <div class="group flex gap-3 flex-1 bg-card/80 group p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
             <div class="text-4xl mb-4">
               <audience.icon class="w-8 h-8 group-hover:text-primary" />
             </div>
             <div>
-              <h3 class="md: text-xl mb-1 group-hover:text-primary">
+              <h3 class="md: text-xl group-hover:text-primary">
                 {audience.title}
               </h3>
               <p class="text-sm md:text-base opacity-70">

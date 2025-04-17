@@ -54,16 +54,16 @@ const benefits = [
     Why TestMagic?
   </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-3">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
     {
       benefits.map((benefit) => (
-        <div class="group bg-card/80 p-4 md:p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
-          <div class="flex items-start gap-2">
+        <div class="group bg-card/80 py-4 px-5 md:p-6 rounded-xl border hover:border-primary hover:shadow-md transition-all duration-300">
+          <div class="flex items-start gap-2 md:gap-3">
             <div class="text-3xl group-hover:text-primary">
-              <benefit.icon class="w-6 h-6 mt-1 " />
+              <benefit.icon class="w-5 h-5 sm:w-6 sm:h-6 mt-1 " />
             </div>
             <div>
-              <h3 class="text-lg text-foreground group-hover:text-primary">
+              <h3 class="md:text-lg text-foreground group-hover:text-primary">
                 {benefit.title}
               </h3>
               <p class="text-sm md:text-base opacity-70">
